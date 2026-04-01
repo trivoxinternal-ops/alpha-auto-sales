@@ -867,26 +867,89 @@
         @media (max-width: 768px) {
             .nav-links, .nav-book { display: none; }
             .mobile-toggle { display: flex; }
-            .section { padding: 100px 6vw; }
-            .hero-titles { padding-left: 6vw; }
+            .section { padding: 60px 5vw; }
+
+            /* Hero — compact */
+            .hero { min-height: 100svh; }
+            .hero-titles { padding-left: 5vw; }
             .hero-car-reveal img { max-width: 80vw; }
-            .stats-row { flex-direction: column; gap: 48px; }
+            .hero-line1, .hero-line2 { font-size: clamp(3.5rem, 16vw, 6rem); }
+            .hero-sub { margin-top: 20px; }
+            .hero-ctas { flex-direction: column; gap: 8px; margin-top: 28px; }
+            .hero-btn { text-align: center; padding: 14px 28px; }
+
+            /* Stats — horizontal 2x2 grid instead of stacked */
+            .stats { padding: 20px 5vw; }
+            .stats-row { flex-wrap: wrap; gap: 0; }
+            .stat { flex: 0 0 50%; padding: 16px 0; }
             .stat::after { display: none; }
-            .car-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+            .stat-num { font-size: clamp(1.4rem, 6vw, 2rem); }
+            .stat-label { font-size: 0.5rem; }
+
+            /* Collection — 2-column grid, smaller cards */
+            .collection { padding: 60px 4vw; }
+            .collection-header { margin-bottom: 28px; }
+            .collection-title { font-size: clamp(1.8rem, 8vw, 3rem); }
+            .collection-line { margin-top: 16px; }
+            .car-grid { grid-template-columns: 1fr 1fr; gap: 2px; max-width: none; }
+            .car-card-img { aspect-ratio: 4 / 3; }
+            .car-card-info { padding: 12px 12px 4px; }
+            .car-card-name { font-size: 0.85rem; padding-top: 6px; margin-bottom: 2px; }
+            .car-card-meta { font-size: 0.55rem; margin-bottom: 2px; }
+            .car-card-price { font-size: 0.85rem; }
+            .car-card-cta { display: none; }
+            .car-card-info::before { display: none; }
+
+            /* Modal */
             .modal-inner { grid-template-columns: 1fr; max-height: 95vh; }
-            .modal-image img { min-height: 240px; max-height: 300px; }
-            .modal-details { padding: 32px 24px; }
+            .modal-image img { min-height: 200px; max-height: 250px; }
+            .modal-details { padding: 24px 20px; }
             .modal-buttons { flex-direction: column; }
-            .financing-layout { grid-template-columns: 1fr; gap: 64px; }
-            .why-row { grid-template-columns: 80px 1fr; gap: 24px; padding: 40px 0; }
+            .modal-car-name { font-size: 1.5rem; }
+            .modal-price { font-size: 1.4rem; }
+
+            /* Reviews — smaller cards */
+            .reviews-section { padding: 60px 0; }
+            .reviews-header { padding: 0 5vw; margin-bottom: 28px; }
+            .reviews-title { font-size: clamp(1.5rem, 6vw, 2rem); margin-bottom: 12px; }
+            .review-card { width: 260px; padding: 20px; }
+            .review-text { font-size: 0.85rem; line-height: 1.6; margin-bottom: 14px; }
+
+            /* Financing — compact */
+            .financing { padding: 60px 5vw; }
+            .financing-layout { grid-template-columns: 1fr; gap: 40px; }
+            .financing-title { font-size: clamp(1.8rem, 7vw, 2.5rem); margin-bottom: 16px; }
+            .financing-sub { margin-bottom: 28px; font-size: 0.72rem; }
+            .fin-step { padding: 24px 0; gap: 16px; }
+            .fin-step-num { font-size: 2rem; width: 36px; }
+            .fin-step h4 { font-size: 1.1rem; }
+            .financing-cta-box { padding: 36px 24px; }
+            .financing-cta-box h3 { font-size: 1.5rem; }
+
+            /* Why Us — compact rows */
+            .why-us { padding: 60px 5vw; }
+            .why-header { margin-bottom: 40px; }
+            .why-title { font-size: clamp(2rem, 9vw, 3.5rem); }
+            .why-row { grid-template-columns: 60px 1fr; gap: 16px; padding: 28px 0; }
             .why-row:hover { padding-left: 0; }
-            .why-title { font-size: clamp(2.5rem, 10vw, 4rem); }
+            .why-row-num { font-size: clamp(2rem, 8vw, 3rem); }
+            .why-row-content h4 { font-size: 1.1rem; margin-bottom: 6px; }
+            .why-row-content p { font-size: 0.72rem; line-height: 1.8; }
+
+            /* CTA — compact */
+            .cta-section { padding: 60px 5vw; }
+            .cta-headline { font-size: clamp(2rem, 8vw, 3rem); }
+            .cta-sub { margin-bottom: 32px; }
             .cta-buttons { flex-direction: column; align-items: center; }
-            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-            .hero-ctas { flex-direction: column; gap: 8px; }
-            .hero-btn { text-align: center; }
-            .review-card { width: 280px; }
+
+            /* Footer — 2-col grid, compact */
+            .footer { padding: 48px 5vw 28px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 28px; }
+            .footer-brand-name { font-size: 1rem; margin-bottom: 8px; }
+            .footer-brand p { font-size: 0.65rem; }
+            .footer-col h5 { margin-bottom: 14px; }
+            .footer-col li { margin-bottom: 8px; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; padding-top: 20px; }
         }
     </style>
 </head>
